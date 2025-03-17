@@ -19,7 +19,7 @@ Transfer learning enables us to adapt pre-trained models to new tasks with limit
 
 ## Prerequisites
 
-- Python 3.x
+- Python 3.10
 - PyTorch
 - torchvision
 - coremltools
@@ -69,5 +69,5 @@ For guidance on deploying Core ML models, consult the [Core ML Documentation](ht
 
 ---
 
-This README provides a comprehensive guide to performing transfer learning with ResNet-18, converting the model to Core ML format, and accelerating inference on the Apple M1 Pro GPU. For detailed explanations and additional resources, please refer to the provided references.
+
 
