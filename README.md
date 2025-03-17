@@ -12,6 +12,36 @@ This project demonstrates the process of performing transfer learning using ResN
 - [2. Converting the Model to Core ML Format](#2-converting-the-model-to-core-ml-format)
 - [3. Accelerating Inference on Apple M1 Pro GPU](#3-accelerating-inference-on-apple-m1-pro-gpu)
 - [References](#references)
+## Steps
+
+1. Transfer Learning on ResNet-18
+
+Used a pre-trained ResNet-18 model.
+
+Fine-tuned it on a custom dataset for image classification.
+
+Saved the trained model for further optimization.
+
+2. Converting to ONNX Format
+
+Converted the trained PyTorch model to ONNX format for cross-platform compatibility.
+
+Defined input and output tensor names.
+
+Enabled dynamic axes to allow flexible batch sizes.
+
+3. Optimizing ONNX Model
+
+Applied graph optimizations such as operator fusion and constant folding.
+
+Used quantization techniques to reduce model size and improve inference speed.
+
+4. Running ONNX Model with Core ML Execution Provider
+
+Leveraged Apple’s Core ML Execution Provider in ONNX Runtime.
+
+Ran inference on Apple M1 Pro GPU for significant speed improvements over CPU executio
+
 
 ## Introduction
 
@@ -59,6 +89,9 @@ To leverage the Apple M1 Pro GPU for inference, we use the Core ML model in an i
 - Processing the output as needed for the application.
 
 For guidance on deploying Core ML models, consult the [Core ML Documentation](https://developer.apple.com/machine-learning/core-ml/).
+## Results
+
+The ONNX model running with Core ML demonstrated up to 22x speed improvement over CPU inference.
 
 ## References
 
